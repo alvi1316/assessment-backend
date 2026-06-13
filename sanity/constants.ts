@@ -1,0 +1,1 @@
+export const DEFAULT_THEME = 'd2ce95ce-91ec-40d1-8439-ef236d3c34dc'
