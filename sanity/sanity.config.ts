@@ -5,6 +5,7 @@ import { schemaTypes } from './schemaTypes'
 import { structure } from './structure'
 import { DEFAULT_THEME } from './constants'
 import { presentationTool } from 'sanity/presentation'
+import { simplerColorInput } from 'sanity-plugin-simpler-color-input'
 
 export default defineConfig({
     name: 'default',
@@ -16,6 +17,7 @@ export default defineConfig({
     plugins: [
         structureTool({ structure: structure }),
         visionTool(),
+        simplerColorInput(),
         presentationTool({
             previewUrl: {
                 origin: process.env.SANITY_STUDIO_FRONTEND_URL,
