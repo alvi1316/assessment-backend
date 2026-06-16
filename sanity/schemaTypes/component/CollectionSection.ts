@@ -6,6 +6,12 @@ export const collectionSection = defineType({
     type: 'document',
     fields: [
         defineField({
+            name: 'theme',
+            title: 'Theme Layout',
+            type: 'reference',
+            to: [{ type: 'themeConfig' }],
+        }),
+        defineField({
             name: 'title',
             title: 'Title',
             type: 'string',

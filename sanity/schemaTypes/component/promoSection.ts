@@ -5,6 +5,12 @@ export const promoSection = defineType({
     title: 'Promo Section',
     type: 'document',
     fields: [
+        defineField({
+            name: 'theme',
+            title: 'Theme Layout',
+            type: 'reference',
+            to: [{ type: 'themeConfig' }],
+        }),
         {
             name: 'title',
             title: 'Title',

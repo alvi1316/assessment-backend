@@ -6,6 +6,12 @@ export const footerSection = defineType({
     type: 'document',
     fields: [
         defineField({
+            name: 'theme',
+            title: 'Theme Layout',
+            type: 'reference',
+            to: [{ type: 'themeConfig' }],
+        }),
+        defineField({
             name: 'copyrightText',
             title: 'Copyright Text',
             type: 'string',

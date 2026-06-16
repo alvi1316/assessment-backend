@@ -18,6 +18,7 @@ export const structure: StructureResolver = (S, context) =>
                             S.documentTypeListItem('promoSection').title('Promo Section'),
                             S.documentTypeListItem('footerSection').title('Footer Section'),
                             S.documentTypeListItem('collectionSection').title('Collection Section'),
+                            S.documentTypeListItem('singleProductSection').title('Single Product Section'),
                         ])
                 ),
             S.listItem()
