@@ -4,6 +4,7 @@ import { footerSection } from "./component/footerSection";
 import { heroBannerType } from "./component/heroBanner";
 import { navBar } from "./component/navBar";
 import { promoSection } from "./component/promoSection";
+import { singleProductSection } from "./component/singleProductSection";
 import { themeConfig } from "./config/themeConfig";
 import { pageType } from "./pageType";
 import { collectionType } from "./shopify/collectionType";
@@ -21,5 +22,6 @@ export const schemaTypes = [
     carouselSlider, 
     promoSection, 
     collectionSection, 
-    footerSection
+    footerSection,
+    singleProductSection
 ]

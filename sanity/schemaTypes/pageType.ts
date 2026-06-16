@@ -51,6 +51,8 @@ export const pageType = defineType({
                                 { type: 'carouselSlider' },
                                 { type: 'promoSection' },
                                 { type: 'collectionSection' },
+                                { type: 'footerSection' },
+                                { type: 'singleProductSection' },
                             ],
                             validation: (Rule) => Rule.required(),
                         }),

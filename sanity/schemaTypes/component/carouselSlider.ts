@@ -31,6 +31,20 @@ export const carouselSlider = defineType({
             initialValue: 'products',
             validation: (Rule) => Rule.required(),
         }),
+        {
+            name: 'cardSpace',
+            title: 'Card Space(px)',
+            type: 'number',
+            validation: (Rule) => Rule.required().min(0).integer(), 
+            initialValue: 300
+        },
+        {
+            name: 'cardStep',
+            title: 'Card Elevation Space(px)',
+            type: 'number',
+            validation: (Rule) => Rule.required().max(-1).integer(), 
+            initialValue: -80
+        },
         defineField({
             name: 'products',
             title: 'Products',
