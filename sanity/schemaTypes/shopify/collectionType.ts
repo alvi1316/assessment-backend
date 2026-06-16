@@ -34,9 +34,15 @@ export const collectionType = defineType({
                     fields: [
                         { name: 'domain', type: 'string' }
                     ]
-                })
+                }),
             ]
         }),
+        defineField({
+            name: 'collectionImage',
+            title: 'Sanity Collection Image',
+            type: 'image',
+            options: { hotspot: true },
+        })
     ],
     preview: {
         select: {

@@ -48,7 +48,9 @@ export const pageType = defineType({
                             to: [
                                 { type: 'heroBanner' },
                                 { type: 'navBar' },
-                                { type: 'carouselSlider' }
+                                { type: 'carouselSlider' },
+                                { type: 'promoSection' },
+                                { type: 'collectionSection' },
                             ],
                             validation: (Rule) => Rule.required(),
                         }),

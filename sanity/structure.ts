@@ -15,6 +15,9 @@ export const structure: StructureResolver = (S, context) =>
                             S.documentTypeListItem('heroBanner').title('Hero Banner'),
                             S.documentTypeListItem('navBar').title('Navigation Bar'),
                             S.documentTypeListItem('carouselSlider').title('Carousel Slider'),
+                            S.documentTypeListItem('promoSection').title('Promo Section'),
+                            S.documentTypeListItem('footerSection').title('Footer Section'),
+                            S.documentTypeListItem('collectionSection').title('Collection Section'),
                         ])
                 ),
             S.listItem()
