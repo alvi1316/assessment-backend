@@ -37,15 +37,62 @@ export const pageType = defineType({
             type: 'array',
             of: [
                 {
-                    type: 'reference',
-                    title: 'Reference a Component',
-                    to: [
-                        { type: 'heroBanner' },
-                        { type: 'navBar' }
-                    ]
+                    type: 'object',
+                    name: 'blockReference',
+                    title: 'Page Block',
+                    fields: [
+                        defineField({
+                            name: 'block',
+                            title: 'Select Component',
+                            type: 'reference',
+                            to: [
+                                { type: 'heroBanner' },
+                                { type: 'navBar' },
+                                { type: 'carouselSlider' }
+                            ],
+                            validation: (Rule) => Rule.required(),
+                        }),
+                        defineField({
+                            name: 'isSticky',
+                            title: 'Sticky Element',
+                            description: 'If enabled, this block will remain fixed at the top of the viewport when scrolling.',
+                            type: 'boolean',
+                            initialValue: false,
+                        })
+                    ],
+                    preview: {
+                        select: {
+                            title: 'block.title',
+                            isSticky: 'isSticky',
+                        },
+                        prepare({ title, isSticky }) {
+                            return {
+                                title: title || 'Untitled Block Component',
+                                subtitle: isSticky ? 'Sticky' : 'Standard Position',
+                            }
+                        }
+                    }
                 }
             ]
-        })
+        }),
+
+        // defineField({
+        //     name: 'pageBuilder',
+        //     title: 'Page Content Blocks',
+        //     description: 'Create, select, and stack components in the exact order you want them to display on the storefront.',
+        //     type: 'array',
+        //     of: [
+        //         {
+        //             type: 'reference',
+        //             title: 'Reference a Component',
+        //             to: [
+        //                 { type: 'heroBanner' },
+        //                 { type: 'navBar' },
+        //                 { type: 'carouselSlider' }
+        //             ]
+        //         }
+        //     ]
+        // })
     ],
     preview: {
         select: {
